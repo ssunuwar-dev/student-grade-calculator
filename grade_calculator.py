@@ -22,6 +22,13 @@ def calculate_grade(average):
 def validate_marks(mark1, mark2):
     return 0 <= mark1 <= 100 and 0 <= mark2 <= 100
 
+# New feature: Determine pass or fail
+def calculate_status(average):
+    if average >= 60:
+        return "Pass"
+    else:
+        return "Fail"
+
 # Student marks
 mark1 = 80
 mark2 = 90
@@ -30,9 +37,12 @@ mark2 = 90
 if validate_marks(mark1, mark2):
     average = calculate_average(mark1, mark2)
     grade = calculate_grade(average)
+    status = calculate_status(average)
 
+    # Display the results
     print("Average:", average)
     print("Grade:", grade)
+    print("Status:", status)
 else:
     print("Error: Marks must be between 0 and 100.")
 
