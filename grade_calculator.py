@@ -30,7 +30,7 @@ def calculate_status(average):
         return "Fail"
 
 # Student marks
-mark1 = 80
+mark1 = 85
 mark2 = 90
 
 # Validate marks before calculating results
