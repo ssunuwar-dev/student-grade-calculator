@@ -18,15 +18,21 @@ def calculate_grade(average):
     else:
         return "F"
 
+# Function to validate student marks
+def validate_marks(mark1, mark2):
+    return 0 <= mark1 <= 100 and 0 <= mark2 <= 100
+
 # Student marks
 mark1 = 80
 mark2 = 90
 
-# Calculate average and grade
-average = calculate_average(mark1, mark2)
-grade = calculate_grade(average)
+# Validate marks before calculating results
+if validate_marks(mark1, mark2):
+    average = calculate_average(mark1, mark2)
+    grade = calculate_grade(average)
 
-# Display the results
-print("Average:", average)
-print("Grade:", grade)
+    print("Average:", average)
+    print("Grade:", grade)
+else:
+    print("Error: Marks must be between 0 and 100.")
 
